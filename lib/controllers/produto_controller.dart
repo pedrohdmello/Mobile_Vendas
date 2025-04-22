@@ -18,10 +18,10 @@ class ProdutoController {
     final index = _produtos.indexWhere((p) => p.id == produto.id);
 
     if (index >= 0) {
-      _produtos[index] = produto; // Atualiza
+      _produtos[index] = produto;
     } else {
       produto.id = DateTime.now().millisecondsSinceEpoch;
-      _produtos.add(produto); // Adiciona
+      _produtos.add(produto);
     }
   }
 
