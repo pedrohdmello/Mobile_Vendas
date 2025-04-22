@@ -15,10 +15,10 @@ class ClienteController {
     final index = _clientes.indexWhere((c) => c.id == cliente.id);
 
     if (index >= 0) {
-      _clientes[index] = cliente; // Atualiza
+      _clientes[index] = cliente;
     } else {
       cliente.id = DateTime.now().millisecondsSinceEpoch;
-      _clientes.add(cliente); // Adiciona novo
+      _clientes.add(cliente);
     }
   }
 
